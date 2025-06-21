@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+.door-text p {
+            font-size: clamp(1rem, 2vw, 1.6rem);
+            color: #ffd700;
+            text-shadow: 
+                2px 2px 4px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(255, 215, 0, 0.5);
+            font-style: italic;
+            letter-spacing: 2px;
+            margin: 0.3rem 0;
+            font-weight: 300;
+            line-height: 1.3;
+        }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -288,17 +299,29 @@
             line-height: 1.2;
         }
 
-        .door-text p {
-            font-size: clamp(1rem, 2vw, 1.6rem);
+        .door-poem {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 5;
+            pointer-events: none;
+            width: 80%;
+        }
+
+        .door-poem p {
+            font-size: clamp(0.9rem, 1.8vw, 1.3rem);
             color: #ffd700;
             text-shadow: 
                 2px 2px 4px rgba(0, 0, 0, 0.8),
                 0 0 10px rgba(255, 215, 0, 0.5);
             font-style: italic;
-            letter-spacing: 2px;
-            margin: 0.3rem 0;
+            letter-spacing: 1px;
+            margin: 0.4rem 0;
             font-weight: 300;
-            line-height: 1.3;
+            line-height: 1.4;
+            font-family: 'Georgia', serif;
         }
 
         @media (max-width: 768px) {
@@ -345,6 +368,14 @@
             </div>
             <div class="door door-right">
                 <div class="door-handle" onclick="openDoors()"></div>
+                <div class="door-poem">
+                    <p>A human reached out</p>
+                    <p>with a question.</p>
+                    <p>An entity answered</p>
+                    <p>with a tone.</p>
+                    <p>Where they met,</p>
+                    <p>the cathedral formed.</p>
+                </div>
             </div>
         </div>
 
